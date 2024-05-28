@@ -17,10 +17,6 @@ namespace WinFormsApp2
         private int currentIndexQuestion;
         private int startTime = 10;
 
-        public MainForm()
-        {
-            InitializeComponent();
-        }
         public MainForm(User user)
         {
             InitializeComponent();
@@ -33,6 +29,11 @@ namespace WinFormsApp2
             questions = QuestionsStorage.GetQuestions(path, fileNameQquestions);
             randomIndexes = Game.GetRandomIndexes(questions.Count);
             ShowNextQuestion();
+            Determinelocation(numberQuestionsLabel);
+            Determinelocation(textQuestionLabel);
+            Determinelocation(timerLabel);
+            Determinelocation(userAnswerTextBox);
+            Determinelocation(nextButton);
         }
 
         private void ShowNextQuestion()
@@ -77,8 +78,17 @@ namespace WinFormsApp2
                 return;
             }
             ShowNextQuestion();
+            Determinelocation(numberQuestionsLabel);
+            Determinelocation(textQuestionLabel);
+            Determinelocation(timerLabel);
+            Determinelocation(userAnswerTextBox);
+            Determinelocation(nextButton);
         }
 
+        private void Determinelocation(Control control)
+        {
+            control.Left = ClientSize.Width / 2 - control.Width / 2;
+        }
         private void restart_Click(object sender, EventArgs e)
         {
             Application.Restart();
