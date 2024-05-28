@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             nextButton = new Button();
             numberQuestionsLabel = new Label();
             textQuestionLabel = new Label();
@@ -44,9 +45,10 @@
             // nextButton
             // 
             nextButton.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            nextButton.Location = new Point(102, 268);
+            nextButton.Location = new Point(90, 271);
+            nextButton.Margin = new Padding(3, 2, 3, 2);
             nextButton.Name = "nextButton";
-            nextButton.Size = new Size(295, 80);
+            nextButton.Size = new Size(258, 60);
             nextButton.TabIndex = 0;
             nextButton.Text = "Далее";
             nextButton.UseVisualStyleBackColor = true;
@@ -55,28 +57,31 @@
             // numberQuestionsLabel
             // 
             numberQuestionsLabel.AutoSize = true;
+            numberQuestionsLabel.BackColor = Color.White;
             numberQuestionsLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numberQuestionsLabel.Location = new Point(170, 61);
+            numberQuestionsLabel.Location = new Point(176, 56);
             numberQuestionsLabel.Name = "numberQuestionsLabel";
-            numberQuestionsLabel.Size = new Size(118, 28);
+            numberQuestionsLabel.Size = new Size(93, 21);
             numberQuestionsLabel.TabIndex = 1;
             numberQuestionsLabel.Text = "Вопрос №1";
             // 
             // textQuestionLabel
             // 
             textQuestionLabel.AutoSize = true;
+            textQuestionLabel.BackColor = Color.White;
             textQuestionLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textQuestionLabel.Location = new Point(41, 131);
+            textQuestionLabel.Location = new Point(0, 103);
             textQuestionLabel.Name = "textQuestionLabel";
-            textQuestionLabel.Size = new Size(142, 28);
+            textQuestionLabel.Size = new Size(111, 21);
             textQuestionLabel.TabIndex = 2;
             textQuestionLabel.Text = "Текст вопроса";
             // 
             // userAnswerTextBox
             // 
-            userAnswerTextBox.Location = new Point(139, 205);
+            userAnswerTextBox.Location = new Point(132, 231);
+            userAnswerTextBox.Margin = new Padding(3, 2, 3, 2);
             userAnswerTextBox.Name = "userAnswerTextBox";
-            userAnswerTextBox.Size = new Size(216, 27);
+            userAnswerTextBox.Size = new Size(190, 23);
             userAnswerTextBox.TabIndex = 3;
             // 
             // menuStrip1
@@ -85,22 +90,24 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { restart, exit });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(724, 33);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(461, 28);
             menuStrip1.TabIndex = 6;
             menuStrip1.Text = "menuStrip1";
             // 
             // restart
             // 
-            restart.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            restart.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             restart.Name = "restart";
-            restart.Size = new Size(252, 29);
+            restart.Size = new Size(217, 24);
             restart.Text = "Перезапустить приложение";
             restart.Click += restart_Click;
             // 
             // exit
             // 
+            exit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             exit.Name = "exit";
-            exit.Size = new Size(180, 29);
+            exit.Size = new Size(178, 24);
             exit.Text = "Выйти из приложения";
             exit.Click += exit_Click;
             // 
@@ -112,7 +119,9 @@
             // timerLabel
             // 
             timerLabel.AutoSize = true;
-            timerLabel.Location = new Point(437, 43);
+            timerLabel.BackColor = Color.White;
+            timerLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            timerLabel.Location = new Point(190, 197);
             timerLabel.Name = "timerLabel";
             timerLabel.Size = new Size(79, 20);
             timerLabel.TabIndex = 7;
@@ -120,9 +129,13 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(724, 456);
+            AutoSize = true;
+            BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(461, 342);
             Controls.Add(timerLabel);
             Controls.Add(userAnswerTextBox);
             Controls.Add(textQuestionLabel);
@@ -131,6 +144,7 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Гений Идиот ";
             FormClosing += MainForm_FormClosing_1;
