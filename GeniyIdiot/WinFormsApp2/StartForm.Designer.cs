@@ -28,77 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            helloLabel = new Label();
-            questionNameLabel = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             nameTextBox = new TextBox();
             furtherButton2 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // helloLabel
-            // 
-            helloLabel.AutoSize = true;
-            helloLabel.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            helloLabel.Location = new Point(35, 49);
-            helloLabel.Margin = new Padding(5, 0, 5, 0);
-            helloLabel.Name = "helloLabel";
-            helloLabel.Size = new Size(498, 24);
-            helloLabel.TabIndex = 0;
-            helloLabel.Text = "Для прохождения теста необходимо ввести имя ";
-            // 
-            // questionNameLabel
-            // 
-            questionNameLabel.AutoSize = true;
-            questionNameLabel.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            questionNameLabel.Location = new Point(173, 113);
-            questionNameLabel.Margin = new Padding(5, 0, 5, 0);
-            questionNameLabel.Name = "questionNameLabel";
-            questionNameLabel.Size = new Size(194, 24);
-            questionNameLabel.TabIndex = 1;
-            questionNameLabel.Text = "Введите ваше имя";
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(144, 187);
+            nameTextBox.Location = new Point(146, 210);
             nameTextBox.Margin = new Padding(5);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(254, 34);
+            nameTextBox.Size = new Size(254, 29);
             nameTextBox.TabIndex = 2;
             // 
             // furtherButton2
             // 
+            furtherButton2.BackgroundImage = (Image)resources.GetObject("furtherButton2.BackgroundImage");
+            furtherButton2.BackgroundImageLayout = ImageLayout.Stretch;
             furtherButton2.Font = new Font("Bauhaus 93", 13.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            furtherButton2.Location = new Point(54, 244);
+            furtherButton2.Location = new Point(181, 249);
             furtherButton2.Margin = new Padding(5);
             furtherButton2.Name = "furtherButton2";
-            furtherButton2.Size = new Size(436, 101);
+            furtherButton2.Size = new Size(200, 85);
             furtherButton2.TabIndex = 3;
-            furtherButton2.Text = "Далее";
             furtherButton2.UseVisualStyleBackColor = true;
             furtherButton2.Click += furtherButton2_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(542, 202);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // StartForm
             // 
-            AutoScaleDimensions = new SizeF(14F, 26F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 584);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(542, 342);
+            Controls.Add(pictureBox1);
             Controls.Add(furtherButton2);
             Controls.Add(nameTextBox);
-            Controls.Add(questionNameLabel);
-            Controls.Add(helloLabel);
             Font = new Font("Arial", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             Margin = new Padding(5);
             Name = "StartForm";
             Text = "Гений Идиот";
             Load += StartForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label helloLabel;
-        private Label questionNameLabel;
         private TextBox nameTextBox;
         private Button furtherButton2;
+        private PictureBox pictureBox1;
     }
 }

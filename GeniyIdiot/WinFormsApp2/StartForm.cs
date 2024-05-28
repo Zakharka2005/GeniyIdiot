@@ -12,7 +12,6 @@ namespace GeniyIdiotWinForm
         public StartForm()
         {
             InitializeComponent();
-            furtherButton2.Text = "Далее";
         }
 
         private void furtherButton2_Click(object sender, EventArgs e)
