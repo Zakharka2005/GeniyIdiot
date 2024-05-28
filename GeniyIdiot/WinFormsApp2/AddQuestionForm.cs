@@ -1,14 +1,4 @@
 ﻿using GeniyIdiotClassLibrary;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace GeniyIdiotWinForm
 {
@@ -38,7 +28,7 @@ namespace GeniyIdiotWinForm
 
             var newQuestion = new Question(questionsTextBox.Text, userAnswer);
             QuestionsStorage.Add(newQuestion, path, fileNameQuestions);
-            label1.Text = "Вопрос добавлен";
+            label2.Text = "Вопрос добавлен";
         }
 
         private void exitMenuStrip_Click(object sender, EventArgs e)
