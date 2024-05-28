@@ -20,27 +20,27 @@ namespace GeniyIdiotWinForm
             UsersResultStorage.Append(user, path, fileNameResults);
         }
 
-        private void resultsButton_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void resultsToolStripMenu_Click(object sender, EventArgs e)
         {
             ResultsTableForm resultsTableForm = new ResultsTableForm();
             resultsTableForm.ShowDialog();
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            DeleteQuestionForm deleteQuestionForm = new DeleteQuestionForm();
-            deleteQuestionForm.ShowDialog();
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
+        private void addToolStripMenu_Click(object sender, EventArgs e)
         {
             AddQuestionsForm addQuestionsForm = new AddQuestionsForm();
             addQuestionsForm.ShowDialog();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void deleteToolStripMenu_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DeleteQuestionForm deleteQuestionForm = new DeleteQuestionForm();
+            deleteQuestionForm.ShowDialog();
         }
     }
 }

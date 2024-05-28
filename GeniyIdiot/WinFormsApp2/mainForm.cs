@@ -38,7 +38,6 @@ namespace WinFormsApp2
 
         private void ShowNextQuestion()
         {
-
             currentIndexQuestion = randomIndexes[0];
             randomIndexes.RemoveAt(0);
             textQuestionLabel.Text = questions[currentIndexQuestion].Text;
@@ -142,7 +141,7 @@ namespace WinFormsApp2
             {
                 Application.Exit();
             }
-            else 
+            else
             {
                 e.Cancel = true;
             }

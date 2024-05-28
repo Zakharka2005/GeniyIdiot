@@ -28,99 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultsForm));
             currentResultLabel = new Label();
-            resultsButton = new Button();
             currentResultLabel2 = new Label();
-            deleteButton = new Button();
-            addButton = new Button();
             exitButton = new Button();
+            menuStrip1 = new MenuStrip();
+            resultsToolStripMenu = new ToolStripMenuItem();
+            questionsToolStripMenu = new ToolStripMenuItem();
+            addToolStripMenu = new ToolStripMenuItem();
+            deleteToolStripMenu = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // currentResultLabel
             // 
             currentResultLabel.AutoSize = true;
+            currentResultLabel.BackColor = Color.White;
             currentResultLabel.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            currentResultLabel.Location = new Point(377, 48);
+            currentResultLabel.Location = new Point(99, 60);
             currentResultLabel.Margin = new Padding(4, 0, 4, 0);
             currentResultLabel.Name = "currentResultLabel";
-            currentResultLabel.Size = new Size(385, 24);
+            currentResultLabel.Size = new Size(314, 19);
             currentResultLabel.TabIndex = 0;
             currentResultLabel.Text = "Имя/Количество правельных ответов";
-            // 
-            // resultsButton
-            // 
-            resultsButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            resultsButton.Location = new Point(186, 150);
-            resultsButton.Margin = new Padding(4, 3, 4, 3);
-            resultsButton.Name = "resultsButton";
-            resultsButton.Size = new Size(778, 81);
-            resultsButton.TabIndex = 1;
-            resultsButton.Text = "Посмотреть результаты прошлых тестирований";
-            resultsButton.UseVisualStyleBackColor = true;
-            resultsButton.Click += resultsButton_Click;
             // 
             // currentResultLabel2
             // 
             currentResultLabel2.AutoSize = true;
             currentResultLabel2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            currentResultLabel2.Location = new Point(520, 99);
+            currentResultLabel2.Location = new Point(215, 106);
             currentResultLabel2.Margin = new Padding(4, 0, 4, 0);
             currentResultLabel2.Name = "currentResultLabel2";
-            currentResultLabel2.Size = new Size(95, 24);
+            currentResultLabel2.Size = new Size(78, 19);
             currentResultLabel2.TabIndex = 2;
             currentResultLabel2.Text = "Диагноз ";
             // 
-            // deleteButton
-            // 
-            deleteButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            deleteButton.Location = new Point(186, 238);
-            deleteButton.Margin = new Padding(4, 3, 4, 3);
-            deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(778, 80);
-            deleteButton.TabIndex = 3;
-            deleteButton.Text = "Удалить вопрос";
-            deleteButton.UseVisualStyleBackColor = true;
-            deleteButton.Click += deleteButton_Click;
-            // 
-            // addButton
-            // 
-            addButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            addButton.Location = new Point(186, 325);
-            addButton.Margin = new Padding(4, 3, 4, 3);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(778, 80);
-            addButton.TabIndex = 4;
-            addButton.Text = "Добавить вопрос";
-            addButton.UseVisualStyleBackColor = true;
-            addButton.Click += addButton_Click;
-            // 
             // exitButton
             // 
-            exitButton.Location = new Point(186, 412);
+            exitButton.BackgroundImage = (Image)resources.GetObject("exitButton.BackgroundImage");
+            exitButton.BackgroundImageLayout = ImageLayout.Zoom;
+            exitButton.Location = new Point(178, 304);
             exitButton.Margin = new Padding(4, 3, 4, 3);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(778, 77);
+            exitButton.Size = new Size(308, 58);
             exitButton.TabIndex = 5;
-            exitButton.Text = "Завершить тестирование";
             exitButton.UseVisualStyleBackColor = true;
             exitButton.Click += exitButton_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { resultsToolStripMenu, questionsToolStripMenu });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(535, 28);
+            menuStrip1.TabIndex = 6;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // resultsToolStripMenu
+            // 
+            resultsToolStripMenu.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            resultsToolStripMenu.Name = "resultsToolStripMenu";
+            resultsToolStripMenu.Size = new Size(195, 24);
+            resultsToolStripMenu.Text = "Результаты прошлых игр";
+            resultsToolStripMenu.Click += resultsToolStripMenu_Click;
+            // 
+            // questionsToolStripMenu
+            // 
+            questionsToolStripMenu.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenu, deleteToolStripMenu });
+            questionsToolStripMenu.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            questionsToolStripMenu.Name = "questionsToolStripMenu";
+            questionsToolStripMenu.Size = new Size(84, 24);
+            questionsToolStripMenu.Text = "Вопросы";
+            // 
+            // addToolStripMenu
+            // 
+            addToolStripMenu.Name = "addToolStripMenu";
+            addToolStripMenu.Size = new Size(201, 24);
+            addToolStripMenu.Text = "Добавить вопрос";
+            addToolStripMenu.Click += addToolStripMenu_Click;
+            // 
+            // deleteToolStripMenu
+            // 
+            deleteToolStripMenu.Name = "deleteToolStripMenu";
+            deleteToolStripMenu.Size = new Size(201, 24);
+            deleteToolStripMenu.Text = "Удалить вопрос";
+            deleteToolStripMenu.Click += deleteToolStripMenu_Click;
+            // 
             // ResultsForm
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 518);
+            BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(535, 388);
             Controls.Add(exitButton);
-            Controls.Add(addButton);
-            Controls.Add(deleteButton);
             Controls.Add(currentResultLabel2);
-            Controls.Add(resultsButton);
             Controls.Add(currentResultLabel);
+            Controls.Add(menuStrip1);
             Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 3, 4, 3);
             Name = "ResultsForm";
             Text = "Гений Идиот";
             Load += resultsForm_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,10 +140,12 @@
         #endregion
 
         private Label currentResultLabel;
-        private Button resultsButton;
         private Label currentResultLabel2;
-        private Button deleteButton;
-        private Button addButton;
         private Button exitButton;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem resultsToolStripMenu;
+        private ToolStripMenuItem questionsToolStripMenu;
+        private ToolStripMenuItem addToolStripMenu;
+        private ToolStripMenuItem deleteToolStripMenu;
     }
 }
