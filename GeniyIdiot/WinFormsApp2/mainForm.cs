@@ -92,6 +92,7 @@ namespace WinFormsApp2
         private void timer1_Tick(object sender, EventArgs e)
         {
             startTime--;
+            timerLabel.ForeColor = Color.Black;
             if (startTime >= 5)
             {
                 timerLabel.Text = startTime + " секунд";
@@ -109,9 +110,9 @@ namespace WinFormsApp2
             if (startTime == 0)
             {
                 timer1.Stop();
-                timerLabel.ForeColor = Color.Black;
                 startTime = 10;
                 timerLabel.Text = startTime + "секунд";
+                timerLabel.ForeColor = Color.Black;
                 ShowNextQuestion();
                 if (randomIndexes.Count == 0)
                 {
