@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteQuestionForm));
             numberDeleteLabel = new Label();
             questionsListBox = new ListBox();
             statusLabel = new Label();
@@ -46,27 +47,29 @@
             // 
             numberDeleteLabel.AutoSize = true;
             numberDeleteLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            numberDeleteLabel.Location = new Point(255, 28);
+            numberDeleteLabel.Location = new Point(115, 31);
             numberDeleteLabel.Name = "numberDeleteLabel";
-            numberDeleteLabel.Size = new Size(261, 28);
+            numberDeleteLabel.Size = new Size(203, 21);
             numberDeleteLabel.TabIndex = 0;
             numberDeleteLabel.Text = "Выдели удаляемый вопрос";
             // 
             // questionsListBox
             // 
             questionsListBox.FormattingEnabled = true;
-            questionsListBox.Location = new Point(162, 72);
+            questionsListBox.ItemHeight = 15;
+            questionsListBox.Location = new Point(12, 54);
+            questionsListBox.Margin = new Padding(3, 2, 3, 2);
             questionsListBox.Name = "questionsListBox";
-            questionsListBox.Size = new Size(466, 264);
+            questionsListBox.Size = new Size(408, 199);
             questionsListBox.TabIndex = 3;
             // 
             // statusLabel
             // 
             statusLabel.AutoSize = true;
             statusLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            statusLabel.Location = new Point(292, 413);
+            statusLabel.Location = new Point(128, 310);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(242, 28);
+            statusLabel.Size = new Size(190, 21);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "Статус: вопрос не удален";
             // 
@@ -98,30 +101,33 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { returnMenuStrip, exitMenuStrip });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(438, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "Завершить тестирование";
             // 
             // returnMenuStrip
             // 
             returnMenuStrip.Name = "returnMenuStrip";
-            returnMenuStrip.Size = new Size(248, 24);
+            returnMenuStrip.Size = new Size(200, 20);
             returnMenuStrip.Text = "Вернуться к предыдущему шагу ";
             returnMenuStrip.Click += returnMenuStrip_Click;
             // 
             // exitMenuStrip
             // 
             exitMenuStrip.Name = "exitMenuStrip";
-            exitMenuStrip.Size = new Size(199, 24);
+            exitMenuStrip.Size = new Size(158, 20);
             exitMenuStrip.Text = "Завершить тестирование";
             exitMenuStrip.Click += exitMenuStrip_Click;
             // 
             // deleteQuestionButton
             // 
+            deleteQuestionButton.BackgroundImage = (Image)resources.GetObject("deleteQuestionButton.BackgroundImage");
             deleteQuestionButton.Font = new Font("Arial Narrow", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            deleteQuestionButton.Location = new Point(238, 342);
+            deleteQuestionButton.Location = new Point(61, 257);
+            deleteQuestionButton.Margin = new Padding(3, 2, 3, 2);
             deleteQuestionButton.Name = "deleteQuestionButton";
-            deleteQuestionButton.Size = new Size(370, 68);
+            deleteQuestionButton.Size = new Size(324, 51);
             deleteQuestionButton.TabIndex = 6;
             deleteQuestionButton.Text = "удалить вопрос";
             deleteQuestionButton.UseVisualStyleBackColor = true;
@@ -129,15 +135,17 @@
             // 
             // DeleteQuestionForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(438, 338);
             Controls.Add(deleteQuestionButton);
             Controls.Add(statusLabel);
             Controls.Add(questionsListBox);
             Controls.Add(numberDeleteLabel);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DeleteQuestionForm";
             Text = "Гений Идиот";
             Load += DeleteQuestionForm_Load;
